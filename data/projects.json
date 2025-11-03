@@ -1,6 +1,6 @@
 {
   "organization": "martz-cloud",
-  "generatedAt": "2025-11-03T19:16:38.817Z",
+  "generatedAt": "2025-11-03T19:32:07.189Z",
   "count": 3,
   "projects": [
     {
@@ -22,8 +22,8 @@
         "Report templates and simple logging utils"
       ],
       "links": {
-        "readme": "README.md",
-        "docs": "intune/",
+        "readme": "https://github.com/martz-cloud/toolbox-powershell/blob/main/README.md",
+        "docs": "https://github.com/martz-cloud/toolbox-powershell/tree/main/intune/",
         "repo": "https://github.com/martz-cloud/toolbox-powershell"
       },
       "tags": [
@@ -53,8 +53,8 @@
         "Validation workflow that builds all .bicep files"
       ],
       "links": {
-        "readme": "README.md",
-        "docs": "modules/",
+        "readme": "https://github.com/martz-cloud/iac-azure-bicep/blob/main/README.md",
+        "docs": "https://github.com/martz-cloud/iac-azure-bicep/tree/main/modules/",
         "repo": "https://github.com/martz-cloud/iac-azure-bicep"
       },
       "tags": [
@@ -87,8 +87,8 @@
       ],
       "links": {
         "repo": "https://github.com/martz-cloud/proj-vanguard",
-        "readme": "README.md",
-        "docs": "docs/"
+        "readme": "https://github.com/martz-cloud/proj-vanguard/blob/main/README.md",
+        "docs": "https://github.com/martz-cloud/proj-vanguard/tree/main/docs/"
       },
       "tags": [
         "healthcare-it",
