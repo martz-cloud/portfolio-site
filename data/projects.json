@@ -1,0 +1,43 @@
+{
+  "organization": "martz-cloud",
+  "generatedAt": "2025-11-03T18:20:42.205216Z",
+  "count": 1,
+  "projects": [
+    {
+      "title": "Project Vanguard",
+      "slug": "vanguard",
+      "role": "Project Owner & Lead Engineer",
+      "stack": [
+        "Azure",
+        "Entra ID",
+        "Intune",
+        "Autopilot",
+        "PowerShell"
+      ],
+      "dates": {
+        "start": "2025-01",
+        "end": "2025-11"
+      },
+      "summary": "Three-track modernization across provisioning, identity, and compliance in healthcare.",
+      "highlights": [
+        "Cut provisioning time with Autopilot and standardized baselines",
+        "Cloud-only Entra ID migration with staged Conditional Access",
+        "HIPAA/NIST-aligned policies and Secure Score uplift"
+      ],
+      "links": {
+        "repo": "https://github.com/martz-cloud/proj-vanguard",
+        "readme": "README.md",
+        "docs": "docs/"
+      },
+      "tags": [
+        "healthcare-it",
+        "azure",
+        "intune",
+        "autopilot",
+        "compliance",
+        "hipaa",
+        "nist"
+      ]
+    }
+  ]
+}

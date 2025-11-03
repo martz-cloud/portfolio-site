@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>martz-cloud · Portfolio Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Michael Martz · Healthcare IT · Azure · Security · Portfolio Hub" />
+</head>
+<body class="min-h-screen bg-gradient-to-b from-white to-slate-50">
+  <header class="sticky top-0 z-10 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-semibold">MM</div>
+        <div>
+          <h1 class="text-xl font-semibold leading-tight">martz-cloud</h1>
+          <p class="text-sm text-slate-500">Healthcare IT · Azure · Security</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-4 text-sm text-slate-500">
+        <a class="hover:text-slate-900" href="#projects">Projects</a>
+        <a class="hover:text-slate-900" href="#about">About</a>
+        <a class="hover:text-slate-900" href="#resume">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="border-b bg-gradient-to-b from-white to-slate-50">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid gap-6 md:grid-cols-3 items-end">
+      <div class="md:col-span-2 space-y-3">
+        <h2 class="text-3xl font-semibold tracking-tight">Healthcare cloud projects that ship</h2>
+        <p class="text-slate-600">
+          Azure‑first initiatives across endpoint provisioning, identity, and compliance. Built with
+          Intune, Entra ID, and PowerShell — focused on measurable outcomes.
+        </p>
+        <div class="flex gap-2">
+          <a href="#projects" class="inline-flex items-center gap-2 rounded-2xl bg-slate-900 text-white px-3 py-2 text-sm">Explore projects</a>
+          <a href="https://github.com/ORG_PLACEHOLDER" class="inline-flex items-center gap-2 rounded-2xl bg-slate-100 text-slate-900 px-3 py-2 text-sm">GitHub</a>
+        </div>
+      </div>
+      <div class="flex justify-end">
+        <div class="rounded-2xl border bg-white p-4 grid grid-cols-3 gap-3 text-xs text-slate-500">
+          <div class="flex items-center gap-2">Azure</div>
+          <div class="flex items-center gap-2">Intune</div>
+          <div class="flex items-center gap-2">HIPAA/NIST</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-7xl mx-auto px-4 py-10 space-y-10" id="projects">
+    <section class="space-y-2">
+      <h3 class="text-2xl font-semibold tracking-tight">Featured Work</h3>
+      <p class="text-slate-600">Projects, tools, and playbooks used in real healthcare environments.</p>
+    </section>
+
+    <section id="cards" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"></section>
+
+    <section id="about" class="rounded-2xl border bg-white p-6">
+      <h4 class="text-lg font-semibold mb-2">About</h4>
+      <p class="text-sm text-slate-600">
+        I build practical Azure solutions for healthcare — focusing on endpoint management, identity, and compliance.
+        I enjoy turning complex requirements into clear runbooks and repeatable automation.
+      </p>
+    </section>
+  </main>
+
+  <footer class="border-t">
+    <div class="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-slate-500">© 2025 Michael Martz</p>
+      <div class="flex gap-3 text-sm">
+        <a href="resume/Resume.pdf" class="rounded-2xl border px-3 py-1.5 hover:bg-slate-50">Resume</a>
+        <a href="mailto:someone@example.com" class="rounded-2xl bg-slate-900 text-white px-3 py-1.5">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    async function loadProjects() { 
+      try {
+        const res = await fetch('data/projects.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error('Failed to load projects.json');
+        const data = await res.json();
+        const list = data.projects || [];
+        const cards = document.getElementById('cards');
+        if (!list.length) {
+          cards.innerHTML = '<div class="text-slate-500 text-sm">No projects published yet. Add a portfolio.json to a repo.</div>';
+          return;
+        }
+        cards.innerHTML = '';
+        list.forEach(p => {
+          const tags = (p.stack || []).map(s => `<span class="text-xs bg-slate-100 px-2 py-1 rounded-full">${s}</span>`).join(' ');
+          const bullets = (p.highlights || []).map(h => `<li>${h}</li>`).join('');
+          const period = p.dates?.end || p.dates?.start || '';
+          const repo = (p.links && p.links.repo) ? p.links.repo : `https://github.com/${data.organization}/${p.slug}`;
+          const docs = (p.links && (p.links.docs || p.links.readme)) ? (p.links.docs || p.links.readme) : repo;
+          const card = `
+            <article class="rounded-2xl border bg-white shadow-sm hover:shadow-md transition-shadow">
+              <div class="p-5">
+                <h4 class="text-lg font-semibold">${p.title}</h4>
+                <p class="text-sm text-slate-600 mt-1">${p.summary || ''}</p>
+                <div class="flex flex-wrap gap-2 mt-3">${tags}</div>
+                <ul class="list-disc list-inside text-sm text-slate-600 mt-3">${bullets}</ul>
+                <div class="mt-5 flex items-center justify-between text-sm">
+                  <span class="text-slate-500">${period}</span>
+                  <div class="flex gap-2">
+                    <a href="${repo}" class="rounded-2xl border px-3 py-1.5 hover:bg-slate-50" target="_blank" rel="noreferrer">Repo</a>
+                    <a href="${docs}" class="rounded-2xl bg-slate-900 text-white px-3 py-1.5" target="_blank" rel="noreferrer">Docs</a>
+                  </div>
+                </div>
+              </div>
+            </article>`;
+          cards.insertAdjacentHTML('beforeend', card);
+        });
+      } catch (e) {
+        console.error(e);
+        document.getElementById('cards').innerHTML = '<div class="text-red-600 text-sm">Error loading project list.</div>';
+      }
+    }
+    loadProjects();
+  </script>
+</body>
+</html>
