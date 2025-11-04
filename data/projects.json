@@ -1,69 +1,8 @@
 {
   "organization": "martz-cloud",
-  "generatedAt": "2025-11-03T20:17:50.785Z",
+  "generatedAt": "2025-11-04T05:34:02.217Z",
   "count": 3,
   "projects": [
-    {
-      "title": "IaC – Azure Bicep Modules",
-      "slug": "iac-azure-bicep",
-      "role": "Author & Maintainer",
-      "stack": [
-        "Azure",
-        "Bicep",
-        "ARM",
-        "GitHub Actions"
-      ],
-      "dates": {
-        "start": "2025-11"
-      },
-      "summary": "Reusable Bicep modules for multi-tenant deployments with parameterized naming (<ORG_NAME>-<APP_NAME>-<ENV>) and subscription-level orchestration.",
-      "highlights": [
-        "Key Vault, Storage, Log Analytics, ACR, Container Apps env modules",
-        "Dev/Prod parameter files with safe placeholders",
-        "Validation workflow that builds all .bicep files"
-      ],
-      "links": {
-        "readme": "https://github.com/martz-cloud/iac-azure-bicep/blob/main/README.md",
-        "docs": "https://martz-cloud.github.io/iac-azure-bicep",
-        "repo": "https://github.com/martz-cloud/iac-azure-bicep"
-      },
-      "tags": [
-        "iac",
-        "azure",
-        "bicep",
-        "devops"
-      ]
-    },
-    {
-      "title": "Toolbox – PowerShell",
-      "slug": "toolbox-powershell",
-      "role": "Author & Maintainer",
-      "stack": [
-        "PowerShell",
-        "Microsoft Graph",
-        "Intune"
-      ],
-      "dates": {
-        "start": "2025-11"
-      },
-      "summary": "Reusable PowerShell utilities for Intune and Microsoft Graph with safe placeholders (<TENANT_ID>, <CLIENT_ID>, scopes).",
-      "highlights": [
-        "Graph app auth helper with device code fallback",
-        "Export stubs for compliance and policy assignments",
-        "Report templates and simple logging utils"
-      ],
-      "links": {
-        "readme": "https://github.com/martz-cloud/toolbox-powershell/blob/main/README.md",
-        "docs": "https://martz-cloud.github.io/toolbox-powershell/",
-        "repo": "https://github.com/martz-cloud/toolbox-powershell"
-      },
-      "tags": [
-        "automation",
-        "intune",
-        "graph",
-        "powershell"
-      ]
-    },
     {
       "title": "Project Vanguard",
       "slug": "vanguard",
@@ -98,6 +37,67 @@
         "compliance",
         "hipaa",
         "nist"
+      ]
+    },
+    {
+      "title": "Toolbox – PowerShell",
+      "slug": "toolbox-powershell",
+      "role": "Author & Maintainer",
+      "stack": [
+        "PowerShell",
+        "Microsoft Graph",
+        "Intune"
+      ],
+      "dates": {
+        "start": "2025-11"
+      },
+      "summary": "Reusable PowerShell utilities for Intune and Microsoft Graph with safe placeholders (<TENANT_ID>, <CLIENT_ID>, scopes).",
+      "highlights": [
+        "Graph app auth helper with device code fallback",
+        "Export stubs for compliance and policy assignments",
+        "Report templates and simple logging utils"
+      ],
+      "links": {
+        "readme": "https://github.com/martz-cloud/toolbox-powershell/blob/main/README.md",
+        "docs": "https://martz-cloud.github.io/toolbox-powershell/",
+        "repo": "https://github.com/martz-cloud/toolbox-powershell"
+      },
+      "tags": [
+        "automation",
+        "intune",
+        "graph",
+        "powershell"
+      ]
+    },
+    {
+      "title": "IaC – Azure Bicep Modules",
+      "slug": "iac-azure-bicep",
+      "role": "Author & Maintainer",
+      "stack": [
+        "Azure",
+        "Bicep",
+        "ARM",
+        "GitHub Actions"
+      ],
+      "dates": {
+        "start": "2025-11"
+      },
+      "summary": "Reusable Bicep modules for multi-tenant deployments with parameterized naming (<ORG_NAME>-<APP_NAME>-<ENV>) and subscription-level orchestration.",
+      "highlights": [
+        "Key Vault, Storage, Log Analytics, ACR, Container Apps env modules",
+        "Dev/Prod parameter files with safe placeholders",
+        "Validation workflow that builds all .bicep files"
+      ],
+      "links": {
+        "readme": "https://github.com/martz-cloud/iac-azure-bicep/blob/main/README.md",
+        "docs": "https://martz-cloud.github.io/iac-azure-bicep",
+        "repo": "https://github.com/martz-cloud/iac-azure-bicep"
+      },
+      "tags": [
+        "iac",
+        "azure",
+        "bicep",
+        "devops"
       ]
     }
   ]
