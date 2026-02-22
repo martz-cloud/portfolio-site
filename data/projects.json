@@ -1,7 +1,7 @@
 {
   "organization": "martz-cloud",
   "generatedAt": "2026-02-21T05:56:18.395Z",
-  "count": 3,
+  "count": 4,
   "projects": [
     {
       "title": "Project Vanguard",
@@ -99,6 +99,40 @@
         "bicep",
         "devops"
       ]
-    }
+    },
+    {
+  "title": "AKS Production Baseline (Budget Lab)",
+  "slug": "aks-production-baseline",
+  "role": "Author & Implementer",
+  "stack": [
+    "Azure",
+    "AKS",
+    "Kubernetes",
+    "ACR",
+    "NGINX Ingress",
+    "Helm",
+    "Azure CLI"
+  ],
+  "dates": {
+    "start": "2026-02"
+  },
+  "summary": "Hands-on AKS deployment focused on production-style patterns with strict cost guardrails (deploy → validate → destroy).",
+  "highlights": [
+    "Provisioned AKS with managed identity and attached ACR",
+    "Deployed workload + Service + NGINX ingress and validated external routing",
+    "Documented a teardown workflow to avoid ongoing compute and LB costs"
+  ],
+  "links": {
+    "repo": "https://github.com/martz-cloud/aks-production-baseline",
+    "readme": "https://github.com/martz-cloud/aks-production-baseline/blob/main/README.md"
+  },
+  "tags": [
+    "azure",
+    "aks",
+    "kubernetes",
+    "containers",
+    "platform-engineering"
+  ]
+}
   ]
 }
