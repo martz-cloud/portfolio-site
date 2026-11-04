@@ -1,7 +1,7 @@
 {
   "organization": "martz-cloud",
-  "generatedAt": "2026-11-03T12:48:48.532Z",
-  "count": 2,
+  "generatedAt": "2026-11-04T12:59:53.839Z",
+  "count": 3,
   "projects": [
     {
       "title": "Project Vanguard",
@@ -37,6 +37,36 @@
         "compliance",
         "hipaa",
         "nist"
+      ]
+    },
+    {
+      "title": "Toolbox – PowerShell",
+      "slug": "toolbox-powershell",
+      "role": "Author & Maintainer",
+      "stack": [
+        "PowerShell",
+        "Microsoft Graph",
+        "Intune"
+      ],
+      "dates": {
+        "start": "2025-11"
+      },
+      "summary": "Reusable PowerShell utilities for Intune and Microsoft Graph with safe placeholders (<TENANT_ID>, <CLIENT_ID>, scopes).",
+      "highlights": [
+        "Graph app auth helper with device code fallback",
+        "Export stubs for compliance and policy assignments",
+        "Report templates and simple logging utils"
+      ],
+      "links": {
+        "readme": "https://github.com/martz-cloud/toolbox-powershell/blob/main/README.md",
+        "docs": "https://martz-cloud.github.io/toolbox-powershell/",
+        "repo": "https://github.com/martz-cloud/toolbox-powershell"
+      },
+      "tags": [
+        "automation",
+        "intune",
+        "graph",
+        "powershell"
       ]
     },
     {
